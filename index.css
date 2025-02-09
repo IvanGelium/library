@@ -1,0 +1,273 @@
+@font-face {
+  font-family: 'spartacusmedium';
+  src: url('spartacus-kvdlp-webfont.woff2') format('woff2'),
+       url('spartacus-kvdlp-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+  font-family: 'archivo_blackregular';
+  src: url('archivoblack.woff2') format('woff2'),
+       url('archivoblack.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+/*reset end*/
+
+.bg {
+width: 100vw;
+height: 99.9vh;
+min-width: 1200px;
+display: flex;
+flex-direction: column; 
+}
+
+.bg > * {
+    box-shadow: 0px 5px 0px rgb(66, 37, 25);
+}
+
+.bg>:first-child {
+  box-shadow:
+  inset 0px -25px 25px rgba(23, 25, 29, 0.5),
+  inset 0px -20px 15px rgb(165, 147, 160),
+  inset 0px -30px 25px rgba(23, 25, 29, 0.5),
+  inset 0px -50px 25px rgb(117, 123, 133);
+}
+
+.bg >:last-child {
+  box-shadow:
+  inset 0px 5px 10px rgb(37, 40, 46, 0.5),
+  inset 0px 20px 50px rgb(82, 65, 65),
+  inset 0px 100px 50px rgba(0, 0, 0, 0.5);
+}
+
+.bg>:last-child, .bg>:first-child {
+  background-image: linear-gradient(180deg, rgba(126,130,150,0.1) 0%, rgba(172,180,199,0.1) 8%, rgba(222,237,242,0.1) 20%, rgba(199,218,224,0.1) 50%, rgba(176,193,217,0.1) 100%), url(marb-text.jpg);
+}
+
+.bg>:nth-child(2){
+  background-image: linear-gradient(180deg, rgba(105,54,54,0.5) 0%, rgba(162, 86, 93, 0.5) 35%, rgba(162, 86, 93, 0.5) 50%, rgba(162, 86, 93, 0.5) 65%, rgba(105,54,54,0.5) 100%), url(velvet-1.jpg);
+  box-shadow:
+  inset 0px 10px 10px rgba(40, 16, 16, 0.5),
+  inset 0px 50px 25px rgb(70, 30, 30, 0.5),
+  inset 0px 200px 100px rgb(88, 46, 58, 0.5),
+  inset 0px -5px 5px rgba(22, 8, 8, 0.5),
+  inset 0px -20px 25px rgb(70, 30, 30, 0.5),
+  inset 0px -50px 100px rgb(88, 46, 58, 0.5);
+}
+
+.bg>:nth-child(3) {
+  background-image: linear-gradient(180deg, rgba(97,66,61,0.5) 0%, rgba(97,66,61,0.5) 4%, rgba(171,137,120,0.5) 14%, rgba(97,66,61,0.5) 26%, rgba(57,32,28,0.5) 65%, rgba(77,49,45,0.5) 78%, rgba(124,83,72,0.5) 90%, rgba(38,20,17,0.5) 100%), url(wood_table_worn_diff_2k.jpg);
+  box-shadow:
+  inset 0px 5px 10px rgba(18, 8, 5, 0.5),
+  inset 0px 15px 15px rgba(191, 139, 96, 0.2);
+}
+
+.cabinet {
+  background-image: linear-gradient(180deg, rgba(129, 91, 86, 0.5) 0%, rgba(62, 45, 45, 0.6) 100%), url(wood_table_worn_diff_2k.jpg);
+  background-size: 100%;
+  box-shadow: 
+  -1rem 0.5rem 100px rgba(0, 0, 0, 0.5),
+  1rem 0.5rem 100px rgba(0, 0, 0, 0.5),
+  inset 0rem -1rem 30px rgba(0, 0, 0, 0.5);
+}
+
+.butt-cont {
+  border-bottom: 3px solid rgba(155, 126, 95, 0.35);
+  border-left: 3px solid rgba(155, 126, 95, 0.2);
+  border-top: 3px solid rgba(56, 41, 26, 0.35);
+  border-right: 3px solid rgba(56, 41, 26, 0.35);
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: rgb(40, 17, 12,0.2);
+  box-shadow: 
+  inset -1rem 1rem 25px rgb(40, 17, 12,0.5),
+  inset 1rem -1rem 25px rgba(102, 78, 53, 0.35);
+}
+
+.button {
+  border-radius: 0.5rem;
+  background-image: linear-gradient(180deg, rgba(129, 91, 86, 0.5) 0%, rgba(62, 45, 45, 0.6) 100%), url(wood_table_worn_diff_2k.jpg);
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 
+  inset 0px 0.5rem 5px rgba(119, 104, 88, 0.3),
+  inset 0px -0.5rem 1px rgba(17, 7, 5, 0.6),
+  inset -0.5rem 0rem 5px rgb(119, 104, 88,0.3),
+  inset 0.5rem 0rem 5px rgba(17, 7, 5, 0.6),
+  -1rem 0.5rem 10px rgba(18, 8, 5, 0.3),
+  0rem 1rem 10px rgba(18, 8, 5, 0.3);
+  transition: 0.05s all linear;
+}
+
+.button:hover {
+  color: rgb(200, 171, 158);
+  transition: 0.05s all linear;
+}
+
+.button:active {
+  transition: 0.05s all linear;
+  box-shadow: 
+  inset 0px -0.5rem 5px rgba(31, 25, 20, 0.3),
+  inset 0px +0.5rem 1px rgba(17, 7, 5, 0.6),
+  inset +0.5rem 0rem 5px rgba(37, 32, 26, 0.3),
+  inset -0.5rem 0rem 5px rgba(17, 7, 5, 0.6);
+  font-size: 0.95vw;
+  padding-top: 0.5rem;
+}
+
+.button::selection {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/*Header start*/
+
+.header {
+  min-width: 1200px;
+  background-size: 50vw 300px;
+  flex-basis: 100px;
+  min-height: 150px;
+  flex-grow: 0.15;
+  display: flex;
+  justify-content: center;
+  font-family:'archivo_blackregular';
+  font-size: 2rem;
+}
+
+  .header > h1:first-child {
+    color: rgba(30, 40, 48, 0.1);
+    text-shadow: 2px -2px 3px white, -2px 2px 3px gray;
+    letter-spacing: 1rem;
+    font-size: max(3vw,6vh);
+  }
+
+  .header > h1:last-child {
+    background:linear-gradient(180deg, rgba(208, 208, 208, 0.3) 0%, rgba(46, 46, 46, 0.3) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: max(3vw,6vh);
+  }
+    
+/*Header end*/
+/*Midbod start*/
+.midbod {
+  min-width: 1200px;
+  padding: 1vw 1vw 0px 1vw ;
+  flex-basis: 400px;
+  flex-grow: 0.50;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat( 5, minmax(200px,1fr));
+  column-gap: 1vw;
+}
+  .cabinet {
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 1rem;
+  }
+    .shelf {
+      border-radius: 5px;
+      width: 100%;
+      height: 16%;
+      background-color: rgb(54, 41, 37, 0.8);
+      box-shadow: 
+      inset -1rem 2rem 30px rgba(35, 26, 23, 0.8),
+      inset 0.5rem -1rem 70px rgba(35, 26, 23, 0.8);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: max(2px,1%);
+    }
+      .book {
+        border-radius: 3px;
+        width: max(10px,4%);
+        height: 60%;
+      }
+
+/*Midbod end*/
+/*Control-space start*/
+.control-space {
+  min-width: 1200px;
+  flex-basis: 200px;
+  flex-grow: 0.20;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+  .butt-cont {
+    width: 20%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+    .button {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: 'archivo_blackregular';
+      font-size: 1vw;
+      color: rgb(152, 123, 94);
+      text-shadow: -2px 2px 1px rgb(48, 32, 26),1px -1px 1px rgb(146, 126, 104);
+    }
+
+
+/*Control-space end*/
+/*Footer start*/
+.footer {
+  min-width: 1200px;
+  background-size: 50vw 300px;    
+  flex-basis: 100px;
+  flex-grow: 0.15;
+
+}
+/*Footer end*/
